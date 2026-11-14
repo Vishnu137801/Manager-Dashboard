@@ -1,0 +1,6 @@
+{
+  "name": "PayFuse Manager Portal",
+  "description": "Enterprise Manager & Team Leader Workforce Management Portal for PayFuse multi-tenant HRMS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-navy: #0B1230;
+  --color-navy-elevated: #131C45;
+  --color-primary: #7050F5;
+  --color-primary-hover: #5D3EE0;
+  --color-secondary: #478BFA;
+  --color-canvas: #F7F7FC;
+  --color-surface: #FFFFFF;
+  --color-success: #16A36A;
+  --color-warning: #E9A23B;
+  --color-error: #E05252;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #F7F7FC;
+    color: #0B1230;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom slim scrollbars for dark sidebar and data tables */
+.scrollbar-navy::-webkit-scrollbar {
+  width: 5px;
+}
+.scrollbar-navy::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-navy::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #D4D8E8;
+  border-radius: 9999px;
+}
+
+@media print {
+  aside, header, nav, .no-print {
+    display: none !important;
+  }
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
